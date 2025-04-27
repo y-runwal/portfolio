@@ -51,6 +51,30 @@ const sr = ScrollReveal({
 //     reset: true
 });
 
+/*===== CONTACT FORM =====*/
+const contactForm = document.getElementById('contact-form');
+
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // stop the default form submission
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if(name && email && message) {
+        alert(`Thank you, ${name}! Your message has been received.`);
+        contactForm.reset(); // clear the form after submission
+    } else {
+        alert('Please fill all the fields.');
+    }
+});
+
+const contactForm = document.getElementById('contact-form');
+
+contactForm.addEventListener('submit', function() {
+    alert('Thank you for contacting me! I will get back to you soon.');
+});
+
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 

@@ -283,11 +283,17 @@ img{
         border-radius: .5rem;
         box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
     }
-    &__icon{
+    &__icon {
         font-size: 2rem;
+        height: 28px;
+        width: 28px;
+        object-fit: contain;
         margin-right: var(--mb-2);
         color: var(--first-color);
+        display: inline-block;
+        vertical-align: middle;
     }
+    
     &__names{
         display: flex;
         align-items: center;
